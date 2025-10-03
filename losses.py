@@ -1,5 +1,5 @@
 """
-Bhaskar's Advanced Loss Functions Module
+dev's Advanced Loss Functions Module
 =======================================
 Comprehensive collection of loss functions for deep learning:
 - Classification losses (Cross-entropy variants, Focal Loss)

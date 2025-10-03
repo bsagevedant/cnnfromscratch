@@ -1,4 +1,4 @@
-# 🚀 Bhaskar's Advanced CNN from Scratch
+# 🚀 dev's Advanced CNN from Scratch
 
 A sophisticated, production-ready Convolutional Neural Network implementation built entirely from scratch using only NumPy and SciPy. This project demonstrates advanced deep learning concepts with modern architectural patterns and optimization techniques.
 
@@ -292,5 +292,5 @@ This project is open source and available under the MIT License.
 
 ---
 
-**Built with ❤️ by Bhaskar** - Demonstrating the power of understanding deep learning from the ground up!
+**Built with ❤️ by dev** - Demonstrating the power of understanding deep learning from the ground up!
 # cnnfromscratch

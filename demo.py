@@ -1,5 +1,5 @@
 """
-Bhaskar's CNN Demo Scripts
+dev's CNN Demo Scripts
 ==========================
 Demonstration scripts showcasing different aspects of the CNN implementation
 """
@@ -318,7 +318,7 @@ def demo_data_analysis():
 
 def run_all_demos():
     """Run all demonstration scripts"""
-    print("🎬 Bhaskar's CNN Complete Demo Suite")
+    print("🎬 dev's CNN Complete Demo Suite")
     print("=" * 50)
     
     demos = [

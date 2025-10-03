@@ -1,5 +1,5 @@
 """
-Bhaskar's Advanced CNN Implementation
+dev's Advanced CNN Implementation
 ====================================
 A sophisticated Convolutional Neural Network built from scratch with:
 - Modern CNN architecture with multiple layers
@@ -198,7 +198,7 @@ def visualize_predictions(network, x_test, y_test, num_samples=10):
 
 def main():
     """Main training pipeline"""
-    print("🚀 Bhaskar's Advanced CNN from Scratch")
+    print("🚀 dev's Advanced CNN from Scratch")
     print("=" * 50)
     
     # Configuration
@@ -285,7 +285,7 @@ def main():
 
 def demo_different_architectures():
     """Demo function to showcase different architectures"""
-    print("🎭 Bhaskar's CNN Architecture Showcase")
+    print("🎭 dev's CNN Architecture Showcase")
     print("=" * 50)
     
     # Load a small sample of MNIST

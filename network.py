@@ -1,5 +1,5 @@
 """
-Bhaskar's Advanced Neural Network Training Framework
+dev's Advanced Neural Network Training Framework
 ==================================================
 Sophisticated training framework with modern features:
 - Batch processing
@@ -245,7 +245,7 @@ def train(network, loss, loss_prime, x_train, y_train,
     current_lr = learning_rate
     
     if verbose:
-        print("🚀 Starting Bhaskar's Advanced CNN Training")
+        print("🚀 Starting dev's Advanced CNN Training")
         print(f"📊 Training samples: {len(x_train)}")
         if x_val is not None:
             print(f"📊 Validation samples: {len(x_val)}")

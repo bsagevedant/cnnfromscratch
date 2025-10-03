@@ -1,5 +1,5 @@
 """
-Bhaskar's Advanced Dense Layer Implementation
+dev's Advanced Dense Layer Implementation
 ============================================
 Enhanced fully connected layer with modern optimization features:
 - Multiple weight initialization strategies

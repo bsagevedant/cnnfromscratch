@@ -1,5 +1,5 @@
 """
-Bhaskar's Advanced Neural Network Layers
+dev's Advanced Neural Network Layers
 ========================================
 Advanced layers for deep learning including:
 - Batch Normalization

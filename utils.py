@@ -1,5 +1,5 @@
 """
-Bhaskar's CNN Utilities Module
+dev's CNN Utilities Module
 =============================
 Utility functions for data processing, model analysis, and visualization
 """

@@ -1,5 +1,5 @@
 """
-Bhaskar's Advanced Convolutional Neural Network Layer
+dev's Advanced Convolutional Neural Network Layer
 ===================================================
 A sophisticated implementation of convolutional layers with modern features:
 - Multiple padding strategies (valid, same, full)

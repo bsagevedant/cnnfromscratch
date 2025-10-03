@@ -1,5 +1,5 @@
 """
-Bhaskar's Advanced Activation Functions Module
+dev's Advanced Activation Functions Module
 ==============================================
 A comprehensive collection of activation functions with optimized implementations
 and advanced features for deep learning networks.
