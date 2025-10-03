@@ -1,5 +1,21 @@
-numpy
-scipy
-keras
-tensorflow
+# Bhaskar's Advanced CNN from Scratch - Dependencies
+# Core scientific computing
+numpy>=1.21.0
+scipy>=1.7.0
+
+# Deep learning frameworks
+keras>=2.8.0
+tensorflow>=2.8.0
+
+# Data processing and visualization
+matplotlib>=3.5.0
+scikit-learn>=1.0.0
+
+# Optional: For enhanced performance
+# numba>=0.56.0  # JIT compilation for speed
+# cupy>=10.0.0   # GPU acceleration (if CUDA available)
+
+# Development and testing
+# pytest>=7.0.0
+# jupyter>=1.0.0
 
