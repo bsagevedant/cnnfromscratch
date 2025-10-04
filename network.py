@@ -245,13 +245,13 @@ def train(network, loss, loss_prime, x_train, y_train,
     current_lr = learning_rate
     
     if verbose:
-        print("🚀 Starting dev's Advanced CNN Training")
-        print(f"📊 Training samples: {len(x_train)}")
+        print("Starting dev's Advanced CNN Training")
+        print(f"Training samples: {len(x_train)}")
         if x_val is not None:
-            print(f"📊 Validation samples: {len(x_val)}")
-        print(f"⚙️  Optimizer: {optimizer.upper()}")
-        print(f"📦 Batch size: {batch_size}")
-        print(f"🎯 Initial learning rate: {learning_rate}")
+            print(f"Validation samples: {len(x_val)}")
+        print(f"Optimizer: {optimizer.upper()}")
+        print(f"Batch size: {batch_size}")
+        print(f"Initial learning rate: {learning_rate}")
         print("-" * 60)
     
     start_time = time.time()
@@ -302,18 +302,18 @@ def train(network, loss, loss_prime, x_train, y_train,
         # Early stopping
         if early_stopping and val_loss is not None:
             if early_stopping(val_loss, network):
-                print(f"🛑 Early stopping at epoch {epoch+1}")
+                print(f"Early stopping at epoch {epoch+1}")
                 break
     
     total_time = time.time() - start_time
     
     if verbose:
         print("-" * 60)
-        print(f"✅ Training completed in {total_time:.2f} seconds")
-        print(f"📈 Final train loss: {epoch_loss:.6f}")
+        print(f"Training completed in {total_time:.2f} seconds")
+        print(f"Final train loss: {epoch_loss:.6f}")
         if val_loss is not None:
-            print(f"📈 Final validation loss: {val_loss:.6f}")
-            print(f"🎯 Final validation accuracy: {val_acc:.4f}")
+            print(f"Final validation loss: {val_loss:.6f}")
+            print(f"Final validation accuracy: {val_acc:.4f}")
     
     # Save results
     if save_path:
@@ -335,7 +335,7 @@ def train(network, loss, loss_prime, x_train, y_train,
         with open(os.path.join(save_path, 'training_history.json'), 'w') as f:
             json.dump(history_data, f, indent=2)
         
-        print(f"💾 Training results saved to {save_path}")
+        print(f"Training results saved to {save_path}")
     
     return history
 
@@ -362,7 +362,7 @@ def save_model(network, filepath):
     with open(filepath, 'w') as f:
         json.dump(model_data, f, indent=2)
     
-    print(f"💾 Model saved to {filepath}")
+    print(f"Model saved to {filepath}")
 
 def load_model(network, filepath):
     """Load model weights from file"""
@@ -387,4 +387,4 @@ def load_model(network, filepath):
             if 'beta' in layer_data:
                 layer.beta = np.array(layer_data['beta'])
     
-    print(f"📂 Model loaded from {filepath}")
+    print(f"Model loaded from {filepath}")

@@ -198,7 +198,7 @@ def visualize_predictions(network, x_test, y_test, num_samples=10):
 
 def main():
     """Main training pipeline"""
-    print("🚀 dev's Advanced CNN from Scratch")
+    print("dev's Advanced CNN from Scratch")
     print("=" * 50)
     
     # Configuration
@@ -207,7 +207,7 @@ def main():
     LIMIT_SAMPLES = 1000  # Limit for faster training
     
     # Load and preprocess data
-    print(f"📊 Loading {DATASET.upper()} dataset...")
+    print(f"Loading {DATASET.upper()} dataset...")
     
     if DATASET == 'mnist':
         (x_train, y_train), (x_test, y_test) = mnist.load_data()
@@ -227,15 +227,15 @@ def main():
         x_train, y_train, test_size=0.2, random_state=42
     )
     
-    print(f"✅ Dataset loaded successfully!")
+    print(f"Dataset loaded successfully!")
     print(f"   Training samples: {len(x_train)}")
     print(f"   Validation samples: {len(x_val)}")
     print(f"   Test samples: {len(x_test)}")
     
     # Create network architecture
-    print(f"\n🏗️  Building {ARCHITECTURE} CNN architecture...")
+    print(f"\nBuilding {ARCHITECTURE} CNN architecture...")
     network = create_advanced_cnn_architecture(input_shape, num_classes, ARCHITECTURE)
-    print(f"✅ Network created with {len(network)} layers")
+    print(f"Network created with {len(network)} layers")
     
     # Training configuration
     config = {
@@ -248,13 +248,13 @@ def main():
         'save_path': f'results/{DATASET}_{ARCHITECTURE}_cnn'
     }
     
-    print(f"\n⚙️  Training Configuration:")
+    print(f"\nTraining Configuration:")
     for key, value in config.items():
         if key != 'save_path':
             print(f"   {key}: {value}")
     
     # Train the model
-    print(f"\n🎯 Starting training...")
+    print(f"\nStarting training...")
     history = train(
         network=network,
         loss=categorical_cross_entropy,
@@ -267,25 +267,25 @@ def main():
     )
     
     # Test the model
-    print(f"\n🧪 Testing model performance...")
+    print(f"\nTesting model performance...")
     test_loss, test_acc = evaluate(network, x_test, y_test, categorical_cross_entropy)
-    print(f"📈 Test Loss: {test_loss:.6f}")
-    print(f"🎯 Test Accuracy: {test_acc:.4f}")
+    print(f"Test Loss: {test_loss:.6f}")
+    print(f"Test Accuracy: {test_acc:.4f}")
     
     # Visualize predictions
-    print(f"\n👁️  Visualizing predictions...")
+    print(f"\nVisualizing predictions...")
     visualize_predictions(network, x_test, y_test)
     
     # Save the trained model
-    print(f"\n💾 Saving trained model...")
+    print(f"\nSaving trained model...")
     save_model(network, os.path.join(config['save_path'], 'model_weights.json'))
     
-    print(f"\n🎉 Training completed successfully!")
-    print(f"📁 Results saved to: {config['save_path']}")
+    print(f"\nTraining completed successfully!")
+    print(f"Results saved to: {config['save_path']}")
 
 def demo_different_architectures():
     """Demo function to showcase different architectures"""
-    print("🎭 dev's CNN Architecture Showcase")
+    print("dev's CNN Architecture Showcase")
     print("=" * 50)
     
     # Load a small sample of MNIST
@@ -297,7 +297,7 @@ def demo_different_architectures():
     results = {}
     
     for arch in architectures:
-        print(f"\n🏗️  Testing {arch} architecture...")
+        print(f"\nTesting {arch} architecture...")
         
         # Create network
         network = create_advanced_cnn_architecture((1, 28, 28), 10, arch)
@@ -324,7 +324,7 @@ def demo_different_architectures():
         print(f"   Final Test Accuracy: {test_acc:.4f}")
     
     # Compare results
-    print(f"\n📊 Architecture Comparison:")
+    print(f"\nArchitecture Comparison:")
     print("-" * 40)
     for arch, metrics in results.items():
         print(f"{arch:12} | Loss: {metrics['loss']:.4f} | Acc: {metrics['accuracy']:.4f}")

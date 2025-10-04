@@ -21,7 +21,7 @@ from utils import (visualize_data_distribution, analyze_model_predictions,
 
 def demo_activation_functions():
     """Demonstrate different activation functions"""
-    print("🎭 Activation Functions Demo")
+    print("Activation Functions Demo")
     print("=" * 40)
     
     from activation import ReLU, LeakyReLU, Swish, GELU, Mish, Sigmoid, Tanh
@@ -61,11 +61,11 @@ def demo_activation_functions():
     plt.tight_layout()
     plt.show()
     
-    print("✅ Activation functions demo completed!")
+    print("Activation functions demo completed!")
 
 def demo_loss_functions():
     """Demonstrate different loss functions"""
-    print("🎯 Loss Functions Demo")
+    print("Loss Functions Demo")
     print("=" * 40)
     
     from losses import (binary_cross_entropy, categorical_cross_entropy, 
@@ -114,11 +114,11 @@ def demo_loss_functions():
     plt.tight_layout()
     plt.show()
     
-    print("✅ Loss functions demo completed!")
+    print("Loss functions demo completed!")
 
 def demo_architecture_comparison():
     """Compare different CNN architectures"""
-    print("🏗️  Architecture Comparison Demo")
+    print("Architecture Comparison Demo")
     print("=" * 40)
     
     # Load small dataset for quick comparison
@@ -136,7 +136,7 @@ def demo_architecture_comparison():
     results = {}
     
     for arch in architectures:
-        print(f"\n🔧 Training {arch} architecture...")
+        print(f"\nTraining {arch} architecture...")
         start_time = time.time()
         
         # Create network
@@ -173,7 +173,7 @@ def demo_architecture_comparison():
             'history': history
         }
         
-        print(f"   ✅ {arch}: {test_acc:.4f} accuracy, {training_time:.1f}s")
+        print(f"   {arch}: {test_acc:.4f} accuracy, {training_time:.1f}s")
     
     # Visualize comparison
     compare_architectures(results, 'accuracy')
@@ -181,12 +181,12 @@ def demo_architecture_comparison():
     # Save results
     save_experiment_results(results, 'results/architecture_comparison.json')
     
-    print("\n✅ Architecture comparison demo completed!")
+    print("\nArchitecture comparison demo completed!")
     return results
 
 def demo_training_techniques():
     """Demonstrate advanced training techniques"""
-    print("🎓 Advanced Training Techniques Demo")
+    print("Advanced Training Techniques Demo")
     print("=" * 40)
     
     # Load dataset
@@ -234,7 +234,7 @@ def demo_training_techniques():
     labels = []
     
     for config_name, config in configs.items():
-        print(f"\n🔧 Training with {config_name}...")
+        print(f"\nTraining with {config_name}...")
         
         # Reset network weights
         network = create_advanced_cnn_architecture((1, 28, 28), 10, 'deep')
@@ -259,16 +259,16 @@ def demo_training_techniques():
         
         # Test performance
         test_loss, test_acc = evaluate(network, x_test, y_test, categorical_cross_entropy)
-        print(f"   📈 Test Accuracy: {test_acc:.4f}")
+        print(f"   Test Accuracy: {test_acc:.4f}")
     
     # Compare training histories
     plot_training_comparison(histories, labels)
     
-    print("\n✅ Training techniques demo completed!")
+    print("\nTraining techniques demo completed!")
 
 def demo_data_analysis():
     """Demonstrate data analysis and visualization"""
-    print("📊 Data Analysis Demo")
+    print("Data Analysis Demo")
     print("=" * 40)
     
     # Load MNIST dataset
@@ -286,7 +286,7 @@ def demo_data_analysis():
     visualize_data_distribution(y_train, y_val, title="MNIST Data Distribution")
     
     # Train a model for analysis
-    print("\n🔧 Training model for analysis...")
+    print("\nTraining model for analysis...")
     network = create_advanced_cnn_architecture((1, 28, 28), 10, 'lightweight')
     
     history = train(
@@ -314,11 +314,11 @@ def demo_data_analysis():
     # Visualize some predictions
     visualize_predictions(network, x_test, y_test, num_samples=10)
     
-    print("\n✅ Data analysis demo completed!")
+    print("\nData analysis demo completed!")
 
 def run_all_demos():
     """Run all demonstration scripts"""
-    print("🎬 dev's CNN Complete Demo Suite")
+    print("dev's CNN Complete Demo Suite")
     print("=" * 50)
     
     demos = [
@@ -334,11 +334,11 @@ def run_all_demos():
         try:
             demo_func()
         except Exception as e:
-            print(f"❌ Error in {demo_name}: {str(e)}")
+            print(f"Error in {demo_name}: {str(e)}")
             continue
     
-    print(f"\n🎉 All demos completed!")
-    print("📁 Check the 'results' directory for saved outputs")
+    print(f"\nAll demos completed!")
+    print("Check the 'results' directory for saved outputs")
 
 if __name__ == "__main__":
     # Run individual demos or all demos

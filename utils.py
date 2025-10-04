@@ -86,7 +86,7 @@ def analyze_model_predictions(network, x_test, y_test, num_samples=20):
     accuracy = np.mean(predictions == true_labels)
     
     # Print detailed analysis
-    print(f"📊 Model Analysis Results:")
+    print(f"Model Analysis Results:")
     print(f"   Accuracy: {accuracy:.4f}")
     print(f"   Average Confidence: {np.mean(confidences):.4f}")
     print(f"   Confidence Std: {np.std(confidences):.4f}")
@@ -181,14 +181,14 @@ def save_experiment_results(results, filepath):
     with open(filepath, 'w') as f:
         json.dump(serializable_results, f, indent=2)
     
-    print(f"💾 Experiment results saved to {filepath}")
+    print(f"Experiment results saved to {filepath}")
 
 def load_experiment_results(filepath):
     """Load experiment results from JSON file"""
     with open(filepath, 'r') as f:
         results = json.load(f)
     
-    print(f"📂 Experiment results loaded from {filepath}")
+    print(f"Experiment results loaded from {filepath}")
     return results
 
 def plot_training_comparison(histories, labels, metric='loss'):
@@ -270,12 +270,12 @@ def calculate_model_complexity(network):
             'trainable': layer_trainable
         })
     
-    print(f"📊 Model Complexity Analysis:")
+    print(f"Model Complexity Analysis:")
     print(f"   Total Parameters: {total_params:,}")
     print(f"   Trainable Parameters: {trainable_params:,}")
     print(f"   Non-trainable Parameters: {total_params - trainable_params:,}")
     
-    print(f"\n📋 Layer-wise Parameter Count:")
+    print(f"\nLayer-wise Parameter Count:")
     for info in layer_info:
         if info['parameters'] > 0:
             print(f"   Layer {info['layer']} ({info['type']}): {info['parameters']:,} params")
@@ -291,7 +291,7 @@ def create_learning_curves_animation(history, save_path=None):
     try:
         from matplotlib.animation import FuncAnimation
     except ImportError:
-        print("⚠️  matplotlib animation not available. Install with: pip install matplotlib[animation]")
+        print("WARNING: matplotlib animation not available. Install with: pip install matplotlib[animation]")
         return
     
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(15, 5))
@@ -328,7 +328,7 @@ def create_learning_curves_animation(history, save_path=None):
     
     if save_path:
         anim.save(save_path, writer='pillow', fps=5)
-        print(f"🎬 Animation saved to {save_path}")
+        print(f"Animation saved to {save_path}")
     
     plt.show()
     return anim
